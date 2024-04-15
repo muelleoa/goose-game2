@@ -28,19 +28,29 @@ img {
 /* Nintendo Top Navigation
 ------------------------------------------ */
 header {
-
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 
 header nav ul {
-
+   display: flex;
+   justify-content: space-around;
+   list-style-type: none;
 }
 
 
 header nav a {
-
+   color: black;
+   text-decoration: none;
+   padding: 1rem;
+   border-radius: 2rem;
+   transition: all .75s ease;
 }
 
 header nav a:hover {
+   background-color: black;
+   color: white;
 
 }
 
@@ -49,51 +59,91 @@ header nav a:hover {
 /* Hero Image
 ------------------------------------------ */
 section.hero-image {
-
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #3D6BD5;
+   border: 2px solid #A5A5A5;
 }
 
 section.hero-image img {
-
+   animation-name: slide-in;
+   animation-duration: 3s;
+   animation-delay: .5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: backwards;
 }
 
+@keyframes slide-in {
+   0% {
+      transform: translateX(-70px);
+      opacity: 0;
+   }
 
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
 
 
 
 /* Game Name & Price
 ------------------------------------------ */
 .game {
-
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 2rem;
 }
 
 .game h1 {
-
+   font-size: 225%; 
+   margin-bottom: .25rem;
 }
 
 
 .game h2 {
-
+   font-weight: normal;
+   color: #A5A5A5;
 }
 
 
 div.buy {
-
+   display: flex;
+   align-items: center;
 }
 
 div.buy li {
-
+   list-style-type: none;
 }
 
 div.buy a {
-
-}
+   background-color: #E20013;
+   border: 2px solid #A5A5A5;
+   padding: 1rem;
+   font-size: 75%;
+   display: block;
+   border-radius: .5rem;
+   color: white;
+   text-decoration: none;
+   margin: .5rem;
+   transition: all 1s ease;
+   }
 
 div.buy a:hover {
-
+   transform: scale(1.25);
+   box-shadow: 0 10px 10px -10px black;
 }
 
 p.price {
-
+   font-size: 200%;
+   margin-right: 1rem;
+   margin-bottom: 0;
 }
 
 
@@ -101,15 +151,20 @@ p.price {
 /* Screen Shots
 ------------------------------------------ */
 section.screen-shots {
-
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 1rem;
+   background: #3D6BD5;
+   padding: 1rem;
 }
 
-section.screen-shots img:nth-child() {
-
+section.screen-shots img:nth-child(1) {
+   grid-column: 1/3;
+   grid-row: 1/3;
 }
 
 section.screen-shots img {
-
+   border: 2px solid #A5A5A5;
 }
 
 
@@ -118,38 +173,64 @@ section.screen-shots img {
 /* Game Description
 ------------------------------------------ */
 main {
-
+   max-width: 960px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   justify-content: center;
+   align-items: center;
+   grid-gap: 2rem;
 }
 
 
 
 section.description {
-
+   grid-row: 1/3;
+   grid-column: 1/2;
+   font-size: 125%;
+   line-height: 1.3;
 }
 
 section.description h2 {
-
+   font-size: 135%;
+   margin-bottom: 1rem;
+   margin-top: 1rem;
 }
 
 section.description h3 {
-
+   font-size: 120%;
+   margin-bottom: 1rem;
 }
 
 section.description li {
-
+   margin-left: 2rem;
+   margin-bottom: .75rem;
 }
 
 img.goose-badge {
-
+   grid-column: 2/3;
+   grid-row: 1/2;
 }
 
 section.play-modes {
-
+   grid-column: 2/3;
+   grid-row: 2/3;
+   background-color: #e9e9e9;
+   border-radius: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
 }
 
 
 /* Footer
 ------------------------------------------ */
 footer {
-
+   background-color: #E20013;
+   padding: 2rem;
+   color: #e9e9e9;
+   margin-top: 2rem;
+   text-align: center;
 }
