@@ -28,20 +28,32 @@ img {
 /* Nintendo Top Navigation
 ------------------------------------------ */
 header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: #E20013;
 
 }
 
 header nav ul {
-
+   list-style-type: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: .5rem;
+   margin-top: .5rem;
 }
 
 
 header nav a {
-
+   text-decoration: none;
+   color: white;
+   padding: 1rem;
 }
 
 header nav a:hover {
-
+   
 }
 
 
@@ -63,33 +75,48 @@ section.hero-image img {
 /* Game Name & Price
 ------------------------------------------ */
 .game {
-
+   text-align: center;
 }
 
 .game h1 {
-
+   font-size: 175%;
+   margin-top: 1rem;
+   margin-bottom: .5rem;
 }
 
 
 .game h2 {
-
+   font-size: 115%;
+   font-weight: normal;
+   margin-bottom: 1rem;
+   color: #A5A5A5;
 }
 
 
 div.buy {
 
+
 }
 
 div.buy li {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: .5rem; 
 }
 
 div.buy a {
-
+   background-color: #E20013;
+   padding: 1rem;
+   border-radius: 2rem;
+   text-decoration: none;
+   list-style-type: none;
+   color: white;
 }
 
 p.price {
-
+   font-size: 130%;
 }
 
 
@@ -97,15 +124,20 @@ p.price {
 /* Screen Shots
 ------------------------------------------ */
 section.screen-shots {
-
+   background-color: #3D6BD5;
+   padding: .5rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: .5rem;
 }
 
-section.screen-shots img:nth-child() {
-
+section.screen-shots img:nth-child(3) {
+   grid-column: 1/3;
+   grid-row: 1/2;
 }
 
 section.screen-shots img {
-
+   border: 2px solid #A5A5A5;
 }
 
 
@@ -114,13 +146,19 @@ section.screen-shots img {
 /* Game Description
 ------------------------------------------ */
 main {
-
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-content: space-around;
+   align-items: center;
 }
 
 
 
 section.description {
-
+   font-size: 115%;
+   padding: 2rem;
+   line-height: 2rem;
+   grid-row: 2/3;
 }
 
 section.description h2 {
@@ -136,16 +174,36 @@ section.description li {
 }
 
 img.goose-badge {
-
+   grid-row: 3/4;
 }
-
+section.play-modes h2 {
+   text-align: center;
+   margin-top: .5rem;
+   margin-bottom: 1rem;
+   grid-column: 1/4;
+   font-size: 125%;
+}
 section.play-modes {
-
+   grid-row: 1/2;
+   background-color:#e9e9e9;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   justify-content: center;
+   align-items: center;
+   grid-gap: .5rem;
+   padding: .5rem;
 }
+
+
+
+
 
 
 /* Footer
 ------------------------------------------ */
 footer {
-   
+   background-color: #3D6BD5;
+   text-align: center;
+   color: white;
+   padding: 1rem;
 }
